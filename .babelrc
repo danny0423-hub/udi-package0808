@@ -1,0 +1,11 @@
+{
+  "presets": [
+    [
+      "@babel/preset-env",
+      {
+        "modules": false  // ✅ 關鍵：保留 ESModule 的 export / import
+      }
+    ],
+    "@babel/preset-react"
+  ]
+}

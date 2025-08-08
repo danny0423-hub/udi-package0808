@@ -1,0 +1,39 @@
+{
+  "name": "udi-package-0808",
+  "version": "1.0.0",
+  "description": "Reusable React components and utilities for UDI system",
+  "main": "dist/index.js",
+  "module": "dist/index.js",
+  "exports": {
+    "import": "./dist/index.js"
+  },
+  "author": "Danny Xiao",
+  "license": "MIT",
+  "keywords": [
+    "react",
+    "components",
+    "utils",
+    "udi",
+    "frontend"
+  ],
+  "scripts": {
+    "build": "webpack --config webpack.config.cjs",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "release": "npm version patch && yarn publish --access public --non-interactive && git push --follow-tags"
+  },
+  "dependencies": {
+    "prop-types": "^15.8.1"
+  },
+  "peerDependencies": {
+    "react": "^17.0.0 || ^18.0.0 || ^19.0.0",
+    "react-dom": "^17.0.0 || ^18.0.0 || ^19.0.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.28.0",
+    "@babel/preset-env": "^7.28.0",
+    "@babel/preset-react": "^7.27.1",
+    "babel-loader": "^10.0.0",
+    "webpack": "^5.101.0",
+    "webpack-cli": "^6.0.1"
+  }
+}

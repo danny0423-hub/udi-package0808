@@ -1,0 +1,51 @@
+# Node modules
+node_modules/
+
+# Build output
+dist/
+build/
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Runtime data
+pids
+*.pid
+*.seed
+*.pid.lock
+
+# IDE/editor
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# OS-specific
+.DS_Store
+Thumbs.db
+
+# Env files
+.env
+.env.*.local
+
+# Babel cache
+.babel-cache/
+.cache/
+
+# Webpack
+webpack-stats.json
+
+# Optional npm pack output
+*.tgz
+
+# Coverage for testing tools like Jest
+coverage/
+
+# TypeScript
+*.tsbuildinfo
+
+# Mac 上的 trash 資料夾
+.Trashes
