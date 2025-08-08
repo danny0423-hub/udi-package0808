@@ -1,0 +1,826 @@
+/* UdiTable 樣式 */
+
+.udi-table-container {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  width: 100%;
+}
+
+/* 錯誤訊息樣式 */
+.udi-table-container .error-message {
+  background: #f8d7da;
+  color: #721c24;
+  padding: 12px 16px;
+  border-left: 4px solid #dc3545;
+  margin-bottom: 16px;
+  border-radius: 4px;
+  font-weight: 500;
+}
+
+@media (max-width: 768px) {
+  .udi-table-container .error-message {
+    margin: 8px;
+    font-size: 14px;
+  }
+}
+
+/* 篩選器樣式 */
+.udi-table-filter {
+  background: #f8f9fa;
+  border-bottom: 1px solid #e9ecef;
+}
+
+.udi-table-filter .filter-section .basic-filter {
+  padding: 16px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.udi-table-filter .filter-section .basic-filter .filter-column-selector {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  white-space: nowrap;
+}
+
+.udi-table-filter .filter-section .basic-filter .filter-column-selector label {
+  font-weight: 500;
+  color: #495057;
+  font-size: 14px;
+}
+
+.udi-table-filter .filter-section .basic-filter .filter-column-selector .filter-column-select {
+  padding: 8px 12px;
+  border: 1px solid #ced4da;
+  border-radius: 4px;
+  background: white;
+  font-size: 14px;
+  cursor: pointer;
+  outline: none;
+  transition: border-color 0.15s ease-in-out;
+  min-width: 120px;
+}
+
+.udi-table-filter .filter-section .basic-filter .filter-column-selector .filter-column-select:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+}
+
+.udi-table-filter .filter-section .basic-filter .filter-column-selector .filter-column-select:hover {
+  border-color: #adb5bd;
+}
+
+.udi-table-filter .filter-section .basic-filter .filter-input {
+  flex: 1;
+  padding: 8px 12px;
+  border: 1px solid #ced4da;
+  border-radius: 4px;
+  font-size: 14px;
+  outline: none;
+  transition: border-color 0.15s ease-in-out;
+  min-width: 200px;
+}
+
+.udi-table-filter .filter-section .basic-filter .filter-input:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+}
+
+.udi-table-filter .filter-section .basic-filter .advanced-filter-toggle {
+  padding: 8px 16px;
+  background: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.15s ease-in-out;
+  white-space: nowrap;
+}
+
+.udi-table-filter .filter-section .basic-filter .advanced-filter-toggle:hover {
+  background: #0056b3;
+}
+
+.udi-table-filter .filter-section .basic-filter .reset-button {
+  padding: 8px 16px;
+  background: #6c757d;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.15s ease-in-out;
+  white-space: nowrap;
+}
+
+.udi-table-filter .filter-section .basic-filter .reset-button:hover {
+  background: #5a6268;
+}
+
+.udi-table-filter .filter-section .advanced-filter {
+  padding: 16px;
+  background: #f1f3f4;
+  border-top: 1px solid #e9ecef;
+}
+
+.udi-table-filter .filter-section .advanced-filter .advanced-filter-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.udi-table-filter .filter-section .advanced-filter .advanced-filter-header h4 {
+  margin: 0;
+  color: #495057;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.udi-table-filter .filter-section .advanced-filter .advanced-filter-header .clear-advanced-button {
+  padding: 6px 12px;
+  background: #dc3545;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 12px;
+  transition: background-color 0.15s ease-in-out;
+}
+
+.udi-table-filter .filter-section .advanced-filter .advanced-filter-header .clear-advanced-button:hover {
+  background: #c82333;
+}
+
+.udi-table-filter .filter-section .advanced-filter .advanced-filter-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 12px;
+}
+
+.udi-table-filter .filter-section .advanced-filter .advanced-filter-grid .advanced-filter-item {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.udi-table-filter .filter-section .advanced-filter .advanced-filter-grid .advanced-filter-item label {
+  font-weight: 500;
+  color: #495057;
+  font-size: 13px;
+}
+
+.udi-table-filter .filter-section .advanced-filter .advanced-filter-grid .advanced-filter-item .advanced-filter-input {
+  padding: 8px 12px;
+  border: 1px solid #ced4da;
+  border-radius: 4px;
+  font-size: 14px;
+  outline: none;
+  transition: border-color 0.15s ease-in-out;
+  background: white;
+}
+
+.udi-table-filter .filter-section .advanced-filter .advanced-filter-grid .advanced-filter-item .advanced-filter-input:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+}
+
+.udi-table-filter .filter-section .advanced-filter .advanced-filter-grid .advanced-filter-item .advanced-filter-input:hover {
+  border-color: #adb5bd;
+}
+
+/* 滾動位置顯示器 */
+.scroll-position-indicator {
+  padding: 8px 16px;
+  background: #e3f2fd;
+  border-bottom: 1px solid #bbdefb;
+  font-size: 12px;
+  color: #1565c0;
+  font-family: 'Courier New', monospace;
+  text-align: center;
+}
+
+/* 表格包裝器 */
+.udi-table-wrapper {
+  overflow-x: auto;
+  height: 300px;
+  overflow-y: auto;
+  border: 1px solid #e9ecef;
+  -webkit-overflow-scrolling: touch;
+}
+
+.udi-table-wrapper::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+.udi-table-wrapper::-webkit-scrollbar-track {
+  background: #f8f9fa;
+  border-radius: 4px;
+}
+
+.udi-table-wrapper::-webkit-scrollbar-thumb {
+  background: #cbd5e0;
+  border-radius: 4px;
+}
+
+.udi-table-wrapper::-webkit-scrollbar-thumb:hover {
+  background: #a0aec0;
+}
+
+/* 表格樣式 */
+.udi-table {
+  width: 200%;
+  min-width: 800px;
+  border-collapse: collapse;
+  font-size: 14px;
+}
+
+.udi-table th,
+.udi-table td {
+  padding: 12px 16px;
+  text-align: left;
+  border-bottom: 1px solid #e9ecef;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 300px;
+}
+
+.udi-table th {
+  background: #f8f9fa;
+  font-weight: 600;
+  color: #495057;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  border-bottom: 2px solid #dee2e6;
+}
+
+.udi-table th.sortable {
+  cursor: pointer;
+  user-select: none;
+  transition: background-color 0.15s ease-in-out;
+}
+
+.udi-table th.sortable:hover {
+  background: #e9ecef;
+}
+
+.udi-table th.sortable .sort-icon {
+  opacity: 0.4;
+}
+
+.udi-table th.sorted {
+  background: #e3f2fd;
+  color: #1976d2;
+}
+
+.udi-table th.sorted .sort-icon {
+  opacity: 1;
+}
+
+.udi-table th .th-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-width: 0;
+}
+
+.udi-table th .sort-icon {
+  margin-left: 8px;
+  font-size: 12px;
+  opacity: 0.7;
+  flex-shrink: 0;
+}
+
+.udi-table tbody tr {
+  transition: background-color 0.15s ease-in-out;
+}
+
+.udi-table tbody tr:hover {
+  background: #f8f9fa;
+}
+
+.udi-table tbody tr:nth-child(even) {
+  background: #fdfdfe;
+}
+
+.udi-table tbody tr:nth-child(even):hover {
+  background: #f8f9fa;
+}
+
+.udi-table tbody td:first-child {
+  left: 0;
+  background: inherit;
+  z-index: 5;
+  border-right: 1px solid #e9ecef;
+}
+
+.udi-table .no-data {
+  text-align: center;
+  color: #6c757d;
+  font-style: italic;
+  padding: 32px;
+}
+
+.udi-table .loading-state {
+  text-align: center;
+  padding: 40px 20px;
+}
+
+.udi-table .loading-state .loading-spinner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+
+.udi-table .loading-state .loading-spinner .spinner {
+  width: 32px;
+  height: 32px;
+  border: 3px solid #f3f3f3;
+  border-top: 3px solid #007bff;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+.udi-table .loading-state .loading-spinner span {
+  color: #868e96;
+  font-size: 14px;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* 分頁樣式 */
+.udi-table-pagination {
+  padding: 16px;
+  background: #f8f9fa;
+  border-top: 1px solid #e9ecef;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.udi-table-pagination .pagination-info {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  color: #6c757d;
+  font-size: 14px;
+}
+
+.udi-table-pagination .pagination-info .page-size-selector {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.udi-table-pagination .pagination-info .page-size-selector label {
+  font-weight: 500;
+  color: #495057;
+}
+
+.udi-table-pagination .pagination-info .page-size-selector .page-size-select {
+  padding: 4px 8px;
+  border: 1px solid #ced4da;
+  border-radius: 4px;
+  background: white;
+  font-size: 14px;
+  cursor: pointer;
+  outline: none;
+  transition: border-color 0.15s ease-in-out;
+}
+
+.udi-table-pagination .pagination-info .page-size-selector .page-size-select:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+}
+
+.udi-table-pagination .pagination-info .page-size-selector .page-size-select:hover {
+  border-color: #adb5bd;
+}
+
+.udi-table-pagination .pagination-info .page-size-selector span {
+  color: #495057;
+}
+
+.udi-table-pagination .pagination-info .pagination-summary {
+  font-size: 13px;
+}
+
+.udi-table-pagination .pagination-controls {
+  display: flex;
+  gap: 4px;
+  align-items: center;
+}
+
+.udi-table-pagination .pagination-controls .current-page-mobile {
+  padding: 8px 12px;
+  background: #007bff;
+  color: white;
+  border-radius: 4px;
+  font-size: 14px;
+  font-weight: 500;
+  min-width: 60px;
+  text-align: center;
+  border: 1px solid #007bff;
+}
+
+.udi-table-pagination .pagination-controls .pagination-button {
+  padding: 6px 12px;
+  border: 1px solid #ced4da;
+  background: white;
+  color: #495057;
+  cursor: pointer;
+  border-radius: 4px;
+  font-size: 14px;
+  transition: all 0.15s ease-in-out;
+  min-width: 40px;
+}
+
+.udi-table-pagination .pagination-controls .pagination-button:hover:not(:disabled) {
+  background: #e9ecef;
+  border-color: #adb5bd;
+}
+
+.udi-table-pagination .pagination-controls .pagination-button:disabled {
+  background: #f8f9fa;
+  color: #6c757d;
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+.udi-table-pagination .pagination-controls .pagination-button.disabled {
+  background: #f1f3f4;
+  color: #9aa0a6;
+  cursor: not-allowed;
+  opacity: 0.5;
+  border-color: #dadce0;
+}
+
+.udi-table-pagination .pagination-controls .pagination-button.disabled:hover {
+  background: #f1f3f4;
+  border-color: #dadce0;
+}
+
+.udi-table-pagination .pagination-controls .pagination-button.active {
+  background: #007bff;
+  border-color: #007bff;
+  color: white;
+}
+
+.udi-table-pagination .pagination-controls .pagination-button.active:hover {
+  background: #0056b3;
+  border-color: #0056b3;
+}
+
+/* 響應式設計 */
+
+/* 大螢幕 (1200px+) - 桌面 */
+@media (min-width: 1200px) {
+  .udi-table-wrapper {
+    height: 400px;
+  }
+  
+  .udi-table-filter .filter-section .advanced-filter .advanced-filter-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* 中等螢幕 (992px - 1199px) - 桌面/平板橫向 */
+@media (max-width: 1199px) and (min-width: 992px) {
+  .udi-table-filter .filter-section .advanced-filter .advanced-filter-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* 小螢幕 (768px - 991px) - 平板 */
+@media (max-width: 991px) and (min-width: 768px) {
+  .udi-table-container {
+    border-radius: 6px;
+  }
+
+  .udi-table-wrapper {
+    height: 350px;
+  }
+
+  .udi-table {
+    min-width: 600px;
+  }
+  
+  .udi-table th,
+  .udi-table td {
+    padding: 10px 12px;
+    font-size: 13px;
+    max-width: 200px;
+  }
+
+  .udi-table-filter .filter-section .basic-filter {
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  
+  .udi-table-filter .filter-section .basic-filter .filter-input {
+    min-width: 180px;
+  }
+
+  .udi-table-filter .filter-section .advanced-filter .advanced-filter-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+
+  .udi-table-pagination {
+    padding: 12px;
+  }
+  
+  .udi-table-pagination .pagination-info .page-size-selector {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+  }
+}
+
+/* 手機螢幕 (481px - 767px) */
+@media (max-width: 767px) and (min-width: 481px) {
+  .udi-table-container {
+    border-radius: 4px;
+    margin: 0 4px;
+  }
+
+  .udi-table-wrapper {
+    height: 300px;
+  }
+
+  .udi-table {
+    min-width: 500px;
+  }
+  
+  .udi-table th,
+  .udi-table td {
+    padding: 8px 10px;
+    font-size: 12px;
+    max-width: 150px;
+  }
+  
+  .udi-table th:first-child,
+  .udi-table tbody td:first-child {
+    position: sticky;
+    left: 0;
+    background: inherit;
+    z-index: 5;
+    border-right: 2px solid #e9ecef;
+    font-weight: 600;
+  }
+
+  .scroll-position-indicator {
+    padding: 6px 12px;
+    font-size: 11px;
+  }
+
+  .udi-table-filter .filter-section .basic-filter {
+    padding: 12px;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 8px;
+  }
+
+  .udi-table-filter .filter-section .basic-filter .filter-column-selector {
+    justify-content: flex-start;
+  }
+  
+  .udi-table-filter .filter-section .basic-filter .filter-column-selector label {
+    font-size: 13px;
+  }
+  
+  .udi-table-filter .filter-section .basic-filter .filter-column-selector .filter-column-select {
+    min-width: 100px;
+    flex: 1;
+    font-size: 14px;
+  }
+
+  .udi-table-filter .filter-section .basic-filter .filter-input {
+    min-width: auto;
+    font-size: 16px;
+  }
+
+  .udi-table-filter .filter-section .basic-filter .advanced-filter-toggle,
+  .udi-table-filter .filter-section .basic-filter .reset-button {
+    align-self: stretch;
+    font-size: 14px;
+  }
+
+  .udi-table-filter .filter-section .advanced-filter {
+    padding: 12px;
+  }
+
+  .udi-table-filter .filter-section .advanced-filter .advanced-filter-header {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 8px;
+  }
+
+  .udi-table-filter .filter-section .advanced-filter .advanced-filter-header h4 {
+    font-size: 14px;
+  }
+  
+  .udi-table-filter .filter-section .advanced-filter .advanced-filter-header .clear-advanced-button {
+    align-self: flex-end;
+  }
+
+  .udi-table-filter .filter-section .advanced-filter .advanced-filter-grid {
+    grid-template-columns: 1fr;
+    gap: 8px;
+  }
+
+  .udi-table-filter .filter-section .advanced-filter .advanced-filter-grid .advanced-filter-item label {
+    font-size: 12px;
+  }
+  
+  .udi-table-filter .filter-section .advanced-filter .advanced-filter-grid .advanced-filter-item .advanced-filter-input {
+    font-size: 16px;
+  }
+
+  .udi-table-pagination {
+    flex-direction: column;
+    align-items: stretch;
+    padding: 12px;
+    gap: 8px;
+  }
+
+  .udi-table-pagination .pagination-info {
+    text-align: center;
+  }
+  
+  .udi-table-pagination .pagination-info .page-size-selector {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .udi-table-pagination .pagination-controls {
+    justify-content: center;
+  }
+  
+  .udi-table-pagination .pagination-controls .pagination-button {
+    padding: 8px 12px;
+    font-size: 13px;
+    min-width: 36px;
+  }
+}
+
+/* 極小螢幕 (320px - 480px) */
+@media (max-width: 480px) {
+  .udi-table-container {
+    border-radius: 0;
+    margin: 0;
+    box-shadow: none;
+    border-left: 1px solid #e9ecef;
+    border-right: 1px solid #e9ecef;
+  }
+
+  .udi-table-wrapper {
+    height: 250px;
+    border: none;
+  }
+
+  .udi-table {
+    min-width: 400px;
+    font-size: 11px;
+  }
+  
+  .udi-table th,
+  .udi-table td {
+    padding: 6px 8px;
+    font-size: 11px;
+    max-width: 120px;
+  }
+  
+  .udi-table th:first-child,
+  .udi-table tbody td:first-child {
+    min-width: 60px;
+  }
+
+  .scroll-position-indicator {
+    padding: 4px 8px;
+    font-size: 10px;
+  }
+
+  .udi-table-filter .filter-section .basic-filter {
+    padding: 8px;
+    gap: 6px;
+  }
+
+  .udi-table-filter .filter-section .basic-filter .filter-column-selector label {
+    font-size: 12px;
+  }
+  
+  .udi-table-filter .filter-section .basic-filter .filter-column-selector .filter-column-select {
+    font-size: 13px;
+    padding: 6px 8px;
+  }
+
+  .udi-table-filter .filter-section .basic-filter .filter-input {
+    padding: 8px 10px;
+    font-size: 16px;
+  }
+
+  .udi-table-filter .filter-section .basic-filter .advanced-filter-toggle,
+  .udi-table-filter .filter-section .basic-filter .reset-button {
+    padding: 8px 12px;
+    font-size: 13px;
+  }
+
+  .udi-table-filter .filter-section .advanced-filter {
+    padding: 8px;
+  }
+
+  .udi-table-filter .filter-section .advanced-filter .advanced-filter-header h4 {
+    font-size: 13px;
+  }
+  
+  .udi-table-filter .filter-section .advanced-filter .advanced-filter-header .clear-advanced-button {
+    padding: 4px 8px;
+    font-size: 11px;
+  }
+
+  .udi-table-filter .filter-section .advanced-filter .advanced-filter-grid {
+    gap: 6px;
+  }
+
+  .udi-table-filter .filter-section .advanced-filter .advanced-filter-grid .advanced-filter-item label {
+    font-size: 11px;
+  }
+  
+  .udi-table-filter .filter-section .advanced-filter .advanced-filter-grid .advanced-filter-item .advanced-filter-input {
+    padding: 6px 8px;
+    font-size: 16px;
+  }
+
+  .udi-table-pagination {
+    padding: 8px;
+    gap: 6px;
+  }
+
+  .udi-table-pagination .pagination-info {
+    font-size: 12px;
+  }
+  
+  .udi-table-pagination .pagination-info .page-size-selector {
+    gap: 4px;
+  }
+  
+  .udi-table-pagination .pagination-info .page-size-selector label {
+    font-size: 11px;
+  }
+  
+  .udi-table-pagination .pagination-info .page-size-selector .page-size-select {
+    padding: 4px 6px;
+    font-size: 12px;
+  }
+  
+  .udi-table-pagination .pagination-info .pagination-summary {
+    font-size: 11px;
+  }
+
+  .udi-table-pagination .pagination-controls {
+    flex-wrap: wrap;
+    gap: 2px;
+  }
+
+  .udi-table-pagination .pagination-controls .pagination-button {
+    padding: 6px 8px;
+    font-size: 11px;
+    min-width: 28px;
+  }
+}
+
+/* 橫向模式優化 */
+@media (orientation: landscape) and (max-height: 500px) {
+  .udi-table-wrapper {
+    height: 200px;
+  }
+  
+  .udi-table-filter .filter-section .basic-filter {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+}
+
+/* 高DPI螢幕優化 */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  .udi-table th,
+  .udi-table td {
+    border-width: 0.5px;
+  }
+}

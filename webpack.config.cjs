@@ -25,6 +25,10 @@ module.exports = {
         exclude: /node_modules/,
         use: 'babel-loader',
       },
+      {
+        test: /\.css$/, // ✅ 新增 CSS loader 處理規則
+        use: ['style-loader', 'css-loader'],
+      },
     ],
   },
   resolve: {

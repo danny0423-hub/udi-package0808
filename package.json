@@ -25,14 +25,23 @@
     "prop-types": "^15.8.1"
   },
   "peerDependencies": {
+    "jsonwebtoken": "^9.0.2",
     "react": "^17.0.0 || ^18.0.0 || ^19.0.0",
-    "react-dom": "^17.0.0 || ^18.0.0 || ^19.0.0"
+    "react-dom": "^17.0.0 || ^18.0.0 || ^19.0.0",
+    "react-hot-toast": "^2.5.2",
+    "store2": "^2.14.4"
   },
   "devDependencies": {
     "@babel/core": "^7.28.0",
     "@babel/preset-env": "^7.28.0",
     "@babel/preset-react": "^7.27.1",
     "babel-loader": "^10.0.0",
+    "buffer": "^6.0.3",
+    "crypto-browserify": "^3.12.1",
+    "css-loader": "^7.1.2",
+    "stream-browserify": "^3.0.0",
+    "style-loader": "^4.0.0",
+    "util": "^0.12.5",
     "webpack": "^5.101.0",
     "webpack-cli": "^6.0.1"
   }
