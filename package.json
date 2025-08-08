@@ -1,6 +1,6 @@
 {
   "name": "udi-package",
-  "version": "1.0.24",
+  "version": "1.0.25",
   "description": "Reusable React components and utilities for UDI system",
   "main": "dist/index.js",
   "module": "dist/index.js",
