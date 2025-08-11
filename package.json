@@ -17,7 +17,8 @@
     "frontend"
   ],
   "scripts": {
-    "build": "webpack --config webpack.config.cjs",
+    "build": "webpack --config webpack.config.cjs --mode production",
+    "build:dev": "webpack --config webpack.config.cjs --mode development",
     "test": "echo \"Error: no test specified\" && exit 1",
     "release": "npm version patch && yarn publish --access public --non-interactive && git push --follow-tags"
   },
